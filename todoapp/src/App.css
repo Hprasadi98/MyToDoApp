@@ -6,6 +6,7 @@
   background: linear-gradient(to right bottom, #648880, #293f50);
   padding: 10px;
   margin: 10px;
+  height: 1000px;
 }
 .header{
   display: flex;
