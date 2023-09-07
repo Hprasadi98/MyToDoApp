@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import TodoForm from './components/TodoForm';
 import todo from './images/todo.png';
+import TodoList from './components/TodoList';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <img src={todo} alt=''></img>
       
       </div>
-      <TodoForm/>
+      <TodoList/>
       
       
     </div>
