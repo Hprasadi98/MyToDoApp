@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './App.css';
+import {AioutlineDelete} from 'react-icons/ai'
+import {BsCheckLg} from 'react-icons/ai'
 
 function App() {
   const[isCompleteScreen, setIsCompleteScreen]=useState(false);
@@ -28,6 +30,10 @@ function App() {
           <div className='todo-list-item'>
             <h3>Task1</h3>
             <p>Description1</p>
+          </div>
+          <div>
+            <AioutlineDelete className='icon'/>
+            <BsCheckLg className='check-icon'/>
           </div>
         </div>
       </div>

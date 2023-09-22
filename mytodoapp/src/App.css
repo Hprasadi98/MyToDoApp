@@ -83,3 +83,22 @@ h1{
 .active{
   background-color: rgb(20, 223, 159);
 }
+
+.todo-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-area{
+  margin-bottom: 15px;
+}
+
+.todo-list-item{
+  background-color: rgb(38, 36, 36);
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
