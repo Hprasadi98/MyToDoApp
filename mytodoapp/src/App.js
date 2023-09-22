@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import './App.css';
 import {AiOutlineDelete} from 'react-icons/ai';
 import {BsCheckLg} from 'react-icons/bs'
@@ -15,12 +15,26 @@ function App() {
     let newTodoItem={
       title:newTitle,
       description:newDescription
-    }
+    };
     let updatedTodoArr = [...allTodos];
     updatedTodoArr.push(newTodoItem);
     setTodos(updatedTodoArr);
     localStorage.setItem('todolist',JSON.stringify(updatedTodoArr))
-  }
+  };
+
+  const handleDeleteTodo=index=>{
+    let reducedTodo=[...allTodos];
+    reducedTodo.splice(index);
+    localStorage.setItem('todolist',JSON.stringify(reducedTodo));
+    setTodos(reducedTodo);
+  };
+
+  useEffect(()=>{
+    let savedTodo = JSON.parse(localStorage.getItem('todolist'));
+    if(savedTodo){
+      setTodos(savedTodo);
+    }
+  },[])
 
   return (
     <div className="App">
@@ -29,7 +43,7 @@ function App() {
         <div className='todo-input'>
           <div className='todo-input-item'>
             <label>Title</label>
-            <input type='text' value={newTitle} onChange={(e)=>setNewTitle(e.target.newTitle)} placeholder="What's the task title?"></input>
+            <input type='text' value={newTitle} onChange={(e)=>setNewTitle(e.target.value)} placeholder="What's the task title?"></input>
           </div>
           <div className='todo-input-item'>
             <label>Description</label>
@@ -53,7 +67,7 @@ function App() {
             <p>{item.description}</p>
             </div>
             <div>
-            <AiOutlineDelete className='icon'/>
+            <AiOutlineDelete className='icon' onClick={()=>handleDeleteTodo(index)}/>
             <BsCheckLg className='check-icon'/>
             </div>
             </div>
