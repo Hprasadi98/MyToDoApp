@@ -19,6 +19,7 @@ function App() {
     let updatedTodoArr = [...allTodos];
     updatedTodoArr.push(newTodoItem);
     setTodos(updatedTodoArr);
+    localStorage.setItem('todolist',JSON.stringify(updatedTodoArr))
   }
 
   return (
