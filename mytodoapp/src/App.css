@@ -20,6 +20,7 @@ h1{
   overflow-y: auto;
   box-shadow: 0px 5px 7px rgb(50, 46, 46);
   border-radius: 10px;
+  margin-bottom: 40%;
 }
 
 .todo-input{
