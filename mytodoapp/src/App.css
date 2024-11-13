@@ -1,5 +1,5 @@
 body{
-  background-image: linear-gradient(to bottom right, rgb(5, 45, 5),black,rgb(15, 78, 15)) ;
+  background-image: linear-gradient(to bottom right, rgb(7, 5, 45),black,rgb(15, 29, 78)) ;
   color: white;
   overflow: hidden;
 }
@@ -51,11 +51,11 @@ h1{
 }
 
 .todo-input-item input:focus{
-  outline: 2px solid rgb(20, 223, 159);
+  outline: 2px solid rgb(51, 20, 223);
 }
 
 .primaryBtn{
-  background-color: rgb(20, 223, 159);
+  background-color: rgb(51, 20, 223);
   color: white;
   border: none;
   border-radius: 0px;
@@ -66,7 +66,7 @@ h1{
 }
 
 .primaryBtn:hover{
-  background-color:rgb(21, 181, 130) ;
+  background-color:rgb(51, 20, 223) ;
 }
 
 .secondaryBtn{
@@ -81,7 +81,7 @@ h1{
 }
 
 .active{
-  background-color: rgb(20, 223, 159);
+  background-color: rgb(51, 20, 223);
 }
 
 .todo-list{
@@ -107,7 +107,7 @@ h1{
 
 .todo-list-item h3{
   font-size: 20px;
-  color:rgb(20, 223, 159) ;
+  color:rgb(51, 20, 223) ;
   font-weight: bold;
   margin: 0;
 }
@@ -130,10 +130,10 @@ h1{
 .check-icon{
   font-size: 30px;
   margin-left: 10px;
-  color: rgb(20, 223, 159);
+  color: rgb(51, 20, 223);
   cursor: pointer;
 }
 
 .check-icon:hover{
-  color: rgb(19, 183, 131);
+  color: rgb(51, 20, 223);
 }
